@@ -1,0 +1,96 @@
+
+-- Veritabanı Yaratma İşemi Başlıyor
+USE master
+
+DROP DATABASE if exists Okul
+
+
+CREATE DATABASE Okul
+
+USE Okul
+--Veritabanı Yaratma İşlemi Bitti
+
+--Tabloları Yaratma İşemi Başlıyor
+
+use Okul
+Create Table Bolumler
+(
+    BolumID INT Primary key identity(1,1),
+    BolumAdi NVARCHAR(50) not null
+)
+
+create table Dersler
+(
+    DersID int primary key identity(1,1),
+    DersAdi NVARCHAR(100) not null,
+    Kredi tinyint not null,
+    BolumID int not null,
+    foreign key (BolumID) references Bolumler(BolumID)
+)
+
+create table Ogrenciler
+(
+    OgrenciID int primary key IDENTITY(1,1),
+    Ad NVARCHAR(50) not null,
+    Soyad NVARCHAR(50) not null,
+    DogumTarihi DATE null,
+    BolumID int not null,
+    foreign key(BolumID) REFERENCES Bolumler(BolumID)
+)
+
+create table DersKayitlari
+(
+    OgrenciID int ,
+    DersID int,
+    primary key(OgrenciID,DersID),
+    foreign key(OgrenciID) references Ogrenciler(OgrenciID),
+    foreign key(DersID) references Dersler(DersID)
+)
+--Tabloları Yaratma İşlemi Bitti
+
+--Veri Ekleme İşlemi Başlıyor
+use Okul
+insert into Bolumler
+    (BolumAdi)
+values
+    ('Bilgisayar Mühendisliği'),
+    ('Hukuk'),
+    ('Mekatronik Mühendisliği')
+
+insert into Dersler
+    (bolumID, DersAdi, Kredi)
+VALUES
+    (1, 'Temel Programlama', 4),
+    (1, 'Temel Elektronik', 6),
+    (1, 'Yapay Zekaya Giriş', 8),
+    (2, 'Temel hukuk', 6),
+    (2, 'Anayasa Hukuku', 10),
+    (3, 'Malzeme Bilimi', 4)
+
+INSERT INTO Ogrenciler
+    (BolumID, Ad,Soyad,DogumTarihi)
+VALUES
+    (1, 'Alican', 'Kintutar', '2000-5-19'),
+    (1, 'Seden', 'Serdengeçen', '1998-6-12'),
+    (1, 'Candan', 'tutankaçan', '1985-3-19'),
+    (1, 'Kemal', 'Evrim', '1996-07-16 ')
+
+INSERT INTO DersKayitlari
+    (OgrenciID,DersID)
+VALUES
+    (1, 1),
+    (1, 2),
+    (1, 3),
+
+
+    (2, 3),
+
+    (3, 4),
+    (3, 5),
+
+
+    (4, 6)
+
+         
+    --Verileri Ekleme İşlemi bitti
+
