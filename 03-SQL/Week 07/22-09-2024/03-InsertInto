@@ -1,0 +1,9 @@
+
+use Okul
+insert into Bolumler
+    (BolumAdi)
+values
+    ('Bilgisayar Mühendisliği'),
+    ('Hukuk'),
+    ('Mekatronik Mühendisliği')
+    
