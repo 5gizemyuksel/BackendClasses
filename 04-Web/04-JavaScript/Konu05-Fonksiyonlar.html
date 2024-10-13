@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions</h1>
+    <button onclick="changeMode('black','white')">Dark Mode</button>
+    <button onclick="changeMode('white','black')">Light Mode </button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nesciunt, consequatur aliquid illo neque quod repellat dignissimos ducimus sequi maxime dolore iste veritatis! Iste, temporibus labore? Ducimus porro iure mollitia nam saepe pariatur nulla doloremque quidem sed, tempore quisquam provident repellendus magni sequi dolorum at ipsam eveniet quasi! Dolore velit facilis accusantium nesciunt quia amet magnam tenetur id praesentium in et inventore ab deleniti sapiente officia illo voluptatem rerum sunt, voluptas consequuntur. Aliquam vel quisquam ratione nihil nostrum sapiente atque, voluptatum voluptas esse quasi, nobis, ducimus pariatur perspiciatis temporibus similique commodi veritatis mollitia animi excepturi libero iure est ab culpa nam? In tempore expedita quod aut. Magni modi quidem sunt? Quibusdam omnis porro odio, iste pariatur autem nesciunt fugit deleniti quisquam obcaecati ipsa nobis est perferendis amet modi itaque laudantium ullam vel alias dolores? Numquam consequuntur, doloremque optio deleniti totam id quisquam ad ipsum voluptatibus nemo cupiditate temporibus eaque repudiandae perferendis eos distinctio dolor dicta animi commodi adipisci minima laboriosam sunt tempora libero. Nobis, facilis ea? Facilis laboriosam accusamus dolores culpa repellat dolor quibusdam sint voluptatum tempora blanditiis, amet nisi voluptatibus deleniti cum ex, nam expedita quis accusantium! Dolores, nemo laboriosam molestiae quis numquam temporibus quibusdam maiores doloremque laborum dolorum autem optio alias eius molestias corporis vero adipisci beatae quaerat culpa neque odit impedit. Maiores quidem sunt in voluptates quis blanditiis quisquam nobis dolore sapiente eaque sed esse totam, beatae sint facere ut quod repellendus quae aut consequuntur sequi? Non voluptates doloribus vitae, enim optio doloremque facilis dolore deserunt rerum nesciunt suscipit tempore numquam aliquam debitis eius! Repellat rem quibusdam exercitationem dicta. Hic, itaque magni ipsam distinctio laudantium repellat perspiciatis odit soluta quae reprehenderit accusantium, perferendis rerum, corrupti fugiat quos inventore animi labore cum quisquam possimus reiciendis. Similique eaque omnis porro perspiciatis odio assumenda atque laborum quidem pariatur. Ex totam at nesciunt quibusdam quia delectus. Saepe minima autem accusantium incidunt voluptatum consectetur quam reprehenderit veritatis cupiditate culpa accusamus nemo minus blanditiis, iste natus. Soluta atque ducimus debitis nobis, porro at quo distinctio consequuntur eaque, excepturi tempore dolorum ipsam aut veniam hic nostrum mollitia pariatur in perferendis. Velit sit reiciendis, illo facilis aliquam officiis veritatis vero suscipit accusantium repellendus quibusdam dolorem sunt nihil adipisci laboriosam quaerat perspiciatis, dolores nulla blanditiis quos quisquam? Voluptates, nisi soluta. Unde explicabo ullam fuga iste beatae aspernatur adipisci asperiores ad necessitatibus. Beatae, error. Ipsam, laboriosam sapiente in, nesciunt, quisquam obcaecati similique provident sequi laborum nostrum dolorem modi fuga odit sed exercitationem beatae possimus vero alias animi? Rem sequi nemo sapiente aut, id incidunt nostrum perferendis, voluptatem magni porro itaque earum ullam iusto assumenda corporis. Tempore autem illum perspiciatis, nihil saepe hic voluptatum quos, ducimus repellat beatae quo, debitis tenetur quam quas nesciunt! Nisi porro beatae sit veniam quam ea eius aut obcaecati sunt neque ut et esse minima magnam fugiat atque cupiditate, asperiores ipsam sapiente commodi at. Illum tenetur voluptatem nemo distinctio cum aliquam magnam ex! Quibusdam, nisi temporibus incidunt dolor ad repudiandae repellendus, sequi culpa non consectetur amet, officiis odit tempora expedita labore doloremque laborum?</p>
+
+
+    <script>
+        /*
+            function fonksiyonAdi(parametreler){
+                çalışacak kodlar
+            }
+        */
+
+        function changeMode(bgColor,fgColor){
+            document.bgColor=bgColor; //Arka plan rengini değiştir
+            document.fgColor=fgColor; //yazı rengini değiştir
+        }
+
+        function selamVer(){
+            console.log("Merhaba JavaScript!");
+        }
+
+       
+
+        function selamVer2(name){
+            console.log('Merhaba ' +name);
+        }
+        function yeniSelamVer(name){
+            if(name==undefined){
+                console.log('Merhaba JavaScript');
+            }else{
+                console.log(`Merhaba ${name}`)
+            }
+            
+        }
+        //  selamVer();
+        // selamVer2('Drogba');
+        // yeniSelamVer(`Engin`);
+        // yeniSelamVer();
+
+        function topla(sayi1,sayi2){
+            console.log(sayi1+sayi2);
+        }
+        //topla (5,7)
+
+        function sum(number1,number2){
+            let result = number1+number2;
+            return result;
+        }
+        let sonuc= sum(56,89);
+        console.log(sonuc);
+    </script>
+</body>
+</html>

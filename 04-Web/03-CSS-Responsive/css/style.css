@@ -1,0 +1,187 @@
+  /* tüm elementleri seçmek için * kullan */
+  * {
+      margin: 0px;
+      /*dış boşluk*/
+      padding: 0px;
+      /*iç boşluk*/
+      /* box-sizing: content-box; */
+
+  }
+
+  body {
+      background-color: bisque;
+      font-family: 'Courier new';
+      color: #555;
+      font-size: 18px;
+
+  }
+
+  #header {
+      border-radius: 20px;
+      margin: 10px;
+      margin-top: 20px;
+      text-align: center;
+      padding: 20px;
+      background-color: cadetblue;
+
+
+
+      /* padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px; */
+
+      /* padding: 20px 40px; bu üst alt 20 sağ sol 40 olacak şekildedir.*/
+  }
+
+  h1 {
+      font-size: 48px;
+  }
+
+  h2 {
+      font-size: 36px;
+  }
+
+  #skills,
+  #links,
+  #profilePicture,
+  #contact {
+      background-color: #FFF;
+      margin: 20px;
+      padding: 20px;
+
+      border-radius: 30px;
+      box-shadow: 5px 5px 15px cadetblue;
+  }
+
+  #skillsContainer {
+      display: flex;
+
+      align-items: center;
+
+
+  }
+
+  #skills {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .skill {
+      margin-bottom: 5px;
+      margin-top: 5px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+      padding: 13px 0;
+      width: 130px;
+      margin-left: 10px;
+      border-radius: 3px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .4);
+      transition: all .3s;
+
+  }
+
+  .skill:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
+      transform: translate(2px, -2px);
+      /*üstüne gittiğimizde hem sağ hem sol kaysın diye*/
+      /*birinciye eksi değer verirsek sola ve aşağı sadece ikinciye eksi verirsek sağa ve yukarı ikiside eksiyse sola ve yukarı*/
+  }
+
+  #links a {
+      text-decoration: none;
+      color: #0075aa;
+      font-weight: bold;
+  }
+
+  #links a:hover {
+      color: #0b6491;
+  }
+
+  #profilePicture img {
+      border-radius: 100%;
+  }
+
+  #contact form input,
+  #contact form textarea {
+      padding: 5px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+  }
+
+  /* hover sadece üstüne gidince girdiğin özellikler çalışsın diye kullanılır */
+  #contact form input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      /* el şekli vermek için */
+      transition: background-color 0.3s;
+      /*gecikme oluşsun diye*/
+  }
+
+  #contact form input[type="submit"]:hover {
+      background-color: #555;
+      /* el şekli vermek için */
+  }
+
+  @media (max-width:850px) {
+      h1 {
+          font-size: 36px;
+      }
+
+      h2 {
+          font-size: 24px;
+      }
+  }
+
+  @media(max-width:670px) {
+      h1 {
+          font-size: 24px;
+      }
+
+      h2 {
+          font-size: 16px;
+      }
+
+      p {
+          font-size: 12px;
+      }
+
+      #links a {
+          font-size: 12px;
+      }
+  }
+
+  @media(max-width: 953px) {
+      .skill {
+          font-size: 12px;
+          width: 80px;
+          padding: 10px;
+
+      }
+  }
+
+  @media(max-width:785px) {
+      #skills {
+          text-align: center;
+          flex-direction: column;
+      }
+
+      #skills h2 {
+          margin-bottom: 10px;
+      }
+  }
+
+  @media(max-width:655px) {
+      #skillsContainer {
+          flex-direction: column;
+      }
+
+      .skill {
+          width: 100px;
+      }
+  }

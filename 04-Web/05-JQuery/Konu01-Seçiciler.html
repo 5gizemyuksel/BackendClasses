@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Seçiciler</title>
+</head>
+<body>
+  <h1>jQuery Seçiciler</h1>
+    <p>jQuery hızlı performanslı ve kısa bir şekilde javascript kodları yazmamızı sağlayan nir kütüphanedir.</p> 
+    
+    <h2>jQuery nasıl eklenir</h2>
+    <ol>
+        <li>
+        jQuery dosyasını indirip proje klasörüne koyarak
+         </li>
+         <li>CDN linki kullanarak </li>
+    </ol>   
+
+    <h2 id="title">Id'ye göre seçme </h2>
+    <p id="message" class="message">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam laudantium eveniet distinctio, rem nostrum!
+    </p>
+
+    <h2 id="title">Deneme</h2>
+    <p id= "description"  class="message">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est natus fugiat doloremque, iusto fugit doloribus perspiciatis ex quae impedit eos accusamus. Enim recusandae rerum tempore excepturi tempora assumenda aperiam quia ex porro? Vel error nisi at quis. Voluptatibus atque pariatur dolores soluta molestiae alias blanditiis quae architecto, cupiditate distinctio aliquam, corrupti, maiores quidem dignissimos. Deserunt culpa reprehenderit qui? Molestiae quae laborum, mollitia, distinctio vitae expedita temporibus exercitationem fugiat rerum qui eius? In sequi neque, sint magnam nulla, culpa nemo eveniet id vero explicabo praesentium fugit vel ratione, veritatis illum inventore at. Dolore porro ab quod culpa, magnam in eum consequatur.</p>
+
+
+
+    <script src="jquery.js"></script>
+    <script>
+        $('div').text('Yeni Metin');
+
+        $('#title').text('jQuery kullanarak ID seçme');
+
+        $('#message').text('Yeni mesaj');
+        $('.message').text('Bunu da class ile seçtik ');
+        const title=$('#title');
+
+        const hobbies=['Spor','Kitap Okumak', 'Müzik'];
+        let htmlContent=`<ul>`;
+           hobbies.forEach(hobby =>{
+            htmlContent+=`<li>${hobby}</li>`;
+           });
+           htmlContent+=`</ul>`
+
+        $('#description').html(  )
+    </script>
+</body>
+</html>
