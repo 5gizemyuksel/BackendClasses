@@ -1,0 +1,112 @@
+body{
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header{
+     border: 1px solid rgb(217, 210, 210);
+     height: 60px;
+    
+}
+
+.menu{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 40px;
+    height: 100%;
+}
+
+.menu a{ 
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.menu a:hover{
+    color: rgb(83, 74, 74);
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: rgb(246, 232, 232);
+}
+
+.page-title{
+    width: 100%;
+    text-align: center;
+    color: orangered;
+    font-weight: normal;
+}
+
+
+.content-container{
+    display: flex;
+}
+
+
+.catgory-list{
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.category-list li{
+    
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: rgb(204, 163, 163)
+
+}
+.content-left {
+    background-color: bisque;
+    width: 20%;
+    padding: 10px;
+}
+
+.content-right{
+ 
+    width: 80%;
+}
+.campaign{
+    text-align: center;
+}
+.campaign-img{
+    width: 100%;
+}
+.campaign-title{
+    margin-top: 0;
+}
+.campaign-description{
+    font-size: 10px;
+}
+.message-container{
+    display: flex;
+    justify-content: center;
+}
+.message{
+    background-color: rgb(135, 128, 142);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-text{
+    font-size: 10px;
+    text-align: center;
+
+}
+
+.product-card{
+    width: 25%;
+    
+}
